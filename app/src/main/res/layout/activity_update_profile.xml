@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:padding="@dimen/_16sdp"
+    tools:context=".dashboard.profile.updateprofile.UpdateProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_photo"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_profile"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="@color/white"
+                android:elevation="@dimen/_4sdp"
+                android:padding="@dimen/_4sdp"
+                android:tint="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_photo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/profile_photo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.933"
+                app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:paddingBottom="@dimen/_16sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/whitealpha" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/first_name"
+            android:inputType="text"
+            android:paddingBottom="@dimen/_16sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/whitealpha" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/last_name"
+            android:inputType="text"
+            android:paddingBottom="@dimen/_16sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/whitealpha" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="@dimen/_16sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/whitealpha" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/dob"
+            android:inputType="date"
+            android:paddingBottom="@dimen/_16sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/whitealpha" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mobile_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:hint="@string/mobile_no"
+            android:inputType="number"
+            android:paddingBottom="@dimen/_16sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/whitealpha"
+            android:visibility="visible" />
+
+        <RadioGroup
+            android:id="@+id/group_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/radiobtn"
+                android:checked="true"
+                android:text="@string/male"
+                android:textColor="@color/whitealpha" />
+
+            <View
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/radiobtn"
+                android:text="@string/female"
+                android:textColor="@color/whitealpha" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

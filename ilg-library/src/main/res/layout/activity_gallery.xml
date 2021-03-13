@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.GalleryActivity">
+
+    <include layout="@layout/include_toolbar_camera_gallery" />
+
+    <RelativeLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include_toolbar"
+        android:background="@color/ILG_colorContent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_camera_gallery_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tl_camera_gallery_tab_layout"
+            android:layout_alignParentTop="true" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_camera_gallery_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ILG_colorWhite"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/ILG_colorBlack"
+            app:tabIndicatorHeight="4dp"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/ILG_colorMainFont"
+            app:tabTextAppearance="@style/ILG_TabLayoutTextAppearance"
+            app:tabTextColor="@color/ILG_colorLightGray" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_16sdp"
+    android:layout_marginRight="@dimen/_16sdp"
+    android:layout_marginBottom="@dimen/_16sdp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/bg_img" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_8sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drawn_design"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kings Univercity"
+            android:textColor="@color/whitealpha"
+            android:textSize="@dimen/_10ssp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/_4sdp"
+        android:layout_height="@dimen/_4sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:background="@drawable/bg_circle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Follow"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_12ssp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rect_line"
+        android:gravity="center"
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingRight="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:text="Remove"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp" />
+
+
+</LinearLayout>

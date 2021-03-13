@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dashboard.messages.ConversationFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16sdp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/back"
+            android:rotation="180"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/messages"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:drawableEnd="@drawable/ic_add_black_24dp"
+        android:drawableRight="@drawable/ic_add_black_24dp"
+        android:drawableTint="@color/colorAccent"
+        android:text="@string/conversations"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_20ssp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:background="@drawable/bg_search_rect"
+        android:drawableStart="@drawable/ic_search_white_24dp"
+        android:drawableLeft="@drawable/ic_search_white_24dp"
+        android:drawablePadding="@dimen/_16sdp"
+        android:hint="@string/search_msg"
+        android:inputType="text"
+        android:padding="@dimen/_8sdp"
+        android:singleLine="false"
+        android:textColor="@color/white"
+        android:textColorHint="@color/whitealpha" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/conversationListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="@dimen/_16sdp" />
+
+</LinearLayout>
