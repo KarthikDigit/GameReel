@@ -13,6 +13,7 @@ import com.instaclone.network.request.RegisterRequest;
 import com.instaclone.network.request.UpdateProfile;
 import com.instaclone.network.request.UploadRequest;
 import com.instaclone.network.response.BaseResponse;
+import com.instaclone.network.response.Following;
 import com.instaclone.network.response.GamesResult;
 import com.instaclone.network.response.GamesTags;
 import com.instaclone.network.response.LoginResponse;
@@ -104,6 +105,15 @@ public interface NetworkApiService {
     @Headers({"Content-Type: application/json;charset=UTF-8"})
     @GET("user")
     Observable<BaseResponse<UserProfile>> getProfile(@HeaderMap Map<String, String> headermap);
+
+    @Headers({"Content-Type: application/json;charset=UTF-8"})
+    @GET("follow-list")
+    Observable<BaseResponse<List<Following>>> getFollowing(@HeaderMap Map<String, String> headermap, @Query("type") int type);
+
+    @Headers({"Content-Type: application/json;charset=UTF-8"})
+    @GET("follow-list")
+    Observable<BaseResponse<List<Following>>> getFollower(@HeaderMap Map<String, String> headermap, @Query("type") int type);
+
 
     @Headers({"Content-Type: application/json;charset=UTF-8"})
     @GET("user")

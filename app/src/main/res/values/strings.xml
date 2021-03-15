@@ -234,5 +234,6 @@
     <string name="camera_and_location_rationale">Please grant camera permission to update profile image</string>
     <string name="unfollow">Unfollow</string>
     <string name="follow">Follow</string>
+    <string name="remove">Remove</string>
 
 </resources>

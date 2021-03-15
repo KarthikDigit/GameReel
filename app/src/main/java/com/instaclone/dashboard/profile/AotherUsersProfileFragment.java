@@ -232,8 +232,15 @@ public class AotherUsersProfileFragment extends BaseFragment {
                     @Override
                     public void onNext(String response) {
 
+                        String t = follow.getText().toString();
 
-                        follow.setText("Unfollow");
+                        if (t.toLowerCase().equalsIgnoreCase("follow")) {
+
+                            follow.setText("Unfollow");
+                        } else {
+                            follow.setText("Follow");
+
+                        }
 
                         hideLoading();
                         loge(response);

@@ -119,6 +119,7 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <activity android:name=".dashboard.followerandfollowing.FollowingAndFollowerActivity"></activity>
     </application>
 
 </manifest>

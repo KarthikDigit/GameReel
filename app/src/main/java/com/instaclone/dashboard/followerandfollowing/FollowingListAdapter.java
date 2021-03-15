@@ -19,7 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapter.ViewHolder> {
+public class FollowingListAdapter extends RecyclerView.Adapter<FollowingListAdapter.ViewHolder> {
 
     private Context mContext;
     private List<Following> mFollowingList;
@@ -29,7 +29,7 @@ public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapte
         this.onItemClickListener = onItemClickListener;
     }
 
-    public FollowerListAdapter(Context mContext, List<Following> mFollowingList) {
+    public FollowingListAdapter(Context mContext, List<Following> mFollowingList) {
         this.mContext = mContext;
         this.mFollowingList = mFollowingList;
     }
@@ -44,16 +44,16 @@ public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapte
 
     @NonNull
     @Override
-    public FollowerListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public FollowingListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.followers_item, parent, false);
+                .inflate(R.layout.following_item, parent, false);
 
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FollowerListAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FollowingListAdapter.ViewHolder holder, int position) {
 
         Following following = mFollowingList.get(position);
 

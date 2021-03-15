@@ -63,6 +63,21 @@
         android:layout_weight="1" />
 
     <TextView
+        android:id="@+id/following_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingRight="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:text="@string/following"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="visible" />
+
+    <TextView
         android:id="@+id/remove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,7 +89,8 @@
         android:paddingBottom="@dimen/_2sdp"
         android:text="@string/remove"
         android:textColor="@color/white"
-        android:textSize="@dimen/_12ssp" />
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone" />
 
 
 </LinearLayout>

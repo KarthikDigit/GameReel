@@ -13,6 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.instaclone.R;
 import com.instaclone.ViewPagerAdapter;
 import com.instaclone.base.BaseFragment;
+import com.instaclone.dashboard.followerandfollowing.FollowingAndFollowerActivity;
 import com.instaclone.dashboard.profile.updateprofile.UpdateProfileActivity;
 import com.instaclone.network.RetrofitAdapter;
 import com.instaclone.network.response.BaseResponse;
@@ -58,6 +59,10 @@ public class ProfileFragment extends BaseFragment {
     LinearLayout headerMenu;
     @BindView(R.id.post_count1)
     TextView postCount1;
+    @BindView(R.id.followers_layout)
+    LinearLayout followersLayout;
+    @BindView(R.id.following_layout)
+    LinearLayout followingLayout;
 
     private ViewPagerAdapter mViewPagerAdapter;
 
@@ -205,5 +210,21 @@ public class ProfileFragment extends BaseFragment {
         }
 
 
+    }
+
+    @OnClick({R.id.followers_layout, R.id.following_layout})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.followers_layout:
+
+                FollowingAndFollowerActivity.startActivity(getContext(), 2);
+
+                break;
+            case R.id.following_layout:
+
+                FollowingAndFollowerActivity.startActivity(getContext(), 1);
+
+                break;
+        }
     }
 }

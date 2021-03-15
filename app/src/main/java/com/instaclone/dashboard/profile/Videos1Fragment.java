@@ -33,6 +33,7 @@ import retrofit2.Response;
  * A simple {@link Fragment} subclass.
  */
 public class Videos1Fragment extends BaseFragment {
+
     private static final String ARG_USER_ID = "user_id";
 
     @BindView(R.id.photoListView)

@@ -37,7 +37,8 @@
             android:gravity="center|start"
             android:orientation="horizontal"
             android:paddingLeft="@dimen/_16sdp"
-            android:paddingRight="@dimen/_16sdp">
+            android:paddingRight="@dimen/_16sdp"
+            android:visibility="gone">
 
             <FrameLayout
                 android:layout_width="wrap_content"
